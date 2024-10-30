@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервис Бронирования Ресурсов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script> <!-- Подключение JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" /> <!-- Стили для календаря -->
+</head>
+<body>
+
+    <!-- Баннер -->
+    <div class="banner">
+        <h1>
+            <img src="images/logo.png" alt="Логотип" class="logo"> СБР
+        </h1>
+        <p>Сервис бронирования ресурсов</p>
+        <div class="auth-buttons">
+            <button>Вход</button>
+            <button>Регистрация</button>
+        </div>
+        <p class="auth-text">Введите свои данные для доступа к сервису.</p>
+    </div>
+
+    <!-- Панель навигации -->
+    <nav class="navigation-bar">
+        <img src="images/small-logo.png" alt="Малый логотип" class="small-logo">
+        <ul>
+            <li><a href="#">Аппаратура</a></li>
+            <li><a href="#" id="people-button">Люди</a></li>
+            <li><a href="#">Пространство</a></li>
+            <li><a href="#" id="profile-button">Профиль</a></li>
+        </ul>
+    </nav>
+
+    <!-- Всплывающее окно профиля -->
+    <div id="profile-popup" class="profile-popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Арина Вреднова</h3>
+            <p>Email: arina@example.com</p>
+            <button id="logout-button">Выход</button>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+        <div class="flex-container">
+            <!-- Секция карточек с людьми -->
+            <div class="people-list" id="people-list" style="display: none;">
+                <section class="people-section">
+                    <div class="person-card">
+                        <img src="images/avatar1.jpg" alt="Арина Вреднище" class="avatar">
+                        <div class="person-info">
+                            <h3>Арина Вреднище</h3>
+                            <p>Видеокамера HD, аксессуары</p>
+                            <button>Пригласить</button>
+                            <button class="details-button">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="images/avatar2.jpg" alt="Арина Вреднова" class="avatar">
+                        <div class="person-info">
+                            <h3>Арина Вреднова</h3>
+                            <p>Фотокамера, оборудование</p>
+                            <button>Пригласить</button>
+                            <button class="details-button">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <!-- Повторяющиеся карточки -->
+                    <div class="person-card">
+                        <img src="images/avatar1.jpg" alt="Арина Вреднище" class="avatar">
+                        <div class="person-info">
+                            <h3>Арина Вреднище</h3>
+                            <p>Видеокамера HD, аксессуары</p>
+                            <button>Пригласить</button>
+                            <button class="details-button">Подробнее</button>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <img src="images/avatar2.jpg" alt="Арина Вреднова" class="avatar">
+                        <div class="person-info">
+                            <h3>Арина Вреднова</h3>
+                            <p>Фотокамера, оборудование</p>
+                            <button>Пригласить</button>
+                            <button class="details-button">Подробнее</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Календарь -->
+            <div class="calendar-container" id="calendar-container" style="display: none;">
+                <h2>Календарь</h2>
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script> <!-- FullCalendar -->
+</body>
+</html>
